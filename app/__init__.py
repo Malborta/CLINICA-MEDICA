@@ -16,7 +16,7 @@ def create_app():
     app.config['SECRET_KEY'] = 'clinica123'
 
     if os.environ.get('RENDER'):
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////data/clinica.db'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///clinica.db'
     else:
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///clinica.db'
 
