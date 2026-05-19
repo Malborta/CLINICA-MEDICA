@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Editar Paciente</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+
+        <label>Nombre</label>
+
+        <input
+        type="text"
+        name="nombre"
+        class="form-control"
+        value="{{ paciente.nombre }}"
+        required>
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Edad</label>
+
+        <input
+        type="number"
+        name="edad"
+        class="form-control"
+        value="{{ paciente.edad }}">
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Dirección</label>
+
+        <input
+        type="text"
+        name="direccion"
+        class="form-control"
+        value="{{ paciente.direccion }}">
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Teléfono</label>
+
+        <input
+        type="text"
+        name="telefono"
+        class="form-control"
+        value="{{ paciente.telefono }}">
+
+    </div>
+
+    <button class="btn btn-success">
+        Guardar Cambios
+    </button>
+
+</form>
+
+{% endblock %}
